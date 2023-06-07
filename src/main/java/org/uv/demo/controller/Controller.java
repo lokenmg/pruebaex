@@ -54,7 +54,7 @@ public class Controller {
             Empleado eMpleado = repositoryEmpleado.save(empleado);
             return new ResponseEntity<>(eMpleado, HttpStatus.CREATED);
         } catch (Exception e) {
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
     
